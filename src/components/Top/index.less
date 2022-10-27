@@ -1,0 +1,84 @@
+.top_navigate{
+  display: flex;
+  justify-content: space-between;
+  height: 60px;
+  width: 100%;
+  position: absolute;
+  z-index: 99;
+  padding: 12px 104px 0 104px;
+  .ant-btn{
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    &::after{
+      outline: none !important;
+      box-shadow: none !important;
+      border-color: transparent !important;
+    }
+  }
+}
+
+// 图片动画
+.contentImg{
+  width: 100%;
+  margin-top: -140px;
+  animation: img_show 0.3s 1 alternate forwards ;
+}
+@keyframes img_show {
+  0%{
+    margin-top: -140px;
+  }
+  100%{
+    margin-top: 0;
+  }
+}
+
+// 文字动画
+.span_text{
+  text-indent: 1.5em;
+  margin-top: -88px;
+  animation: text_show 0.3s 1 alternate 0.4s forwards ;
+}
+@keyframes text_show {
+  0%{
+    margin-top: -88px;
+  }
+  100%{
+    margin-top: 0;
+  }
+}
+
+.user_menu{
+  padding: 0;
+  margin: 0;
+  width: 110px;
+  height: 104px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  .ant-btn{
+    background-color: transparent;
+    border: none;
+    color:#666;
+    height: 10px;
+    width: 86px;
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: 400;
+    background-color: transparent;
+    border: none;
+    box-shadow: none ;
+    &:hover{
+      outline: none ;
+      box-shadow: none ;
+      border-color: transparent ;
+    }
+    &::after{
+      outline: none !important;
+      box-shadow: none !important;
+      border-color: transparent !important;
+    }
+  }
+}

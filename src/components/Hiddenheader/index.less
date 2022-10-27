@@ -1,0 +1,173 @@
+.hidden_header {
+  height: 62px;
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  padding: 10px 86px 0 86px;
+  position: fixed;
+  z-index: 999;
+  margin-top: -62px;
+  visibility: hidden;
+  .header_img {
+    margin: 0 3px 12px 0;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .header_searchInp {
+    width: 200px;
+    height: 36px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 400;
+    text-indent: 10px;
+    background-color: rgb(245, 245, 245);
+    margin: 0 10px 12px 35px;
+
+    &:focus {
+      outline: none;
+      border: 3px solid rgb(209, 233, 255);
+    }
+  }
+
+  .header_searchIcon {
+    font-size: 22px;
+    color: #448ff7;
+    position: absolute;
+    left: 1108px;
+    top: 20px;
+
+    &:hover {
+      cursor: pointer;
+      // animation: header_doudong 0.1s 2 alternate ;
+    }
+  }
+
+  .pneumonia_map {
+    width: 100px;
+    height: 36px;
+    font-size: 16px;
+    line-height: 36px;
+    text-align: center;
+    background-color: rgb(232, 243, 255);
+    margin-bottom: 12px;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .ant-btn {
+    border: none;
+    margin-bottom: 16px;
+    margin-left: 10px;
+
+    &::after {
+      outline: none !important;
+      box-shadow: none !important;
+      border-color: transparent !important;
+    }
+  }
+}
+
+.header_searchInp:placeholder-shown {
+  font-size: 14px;
+  color: rgb(191, 191, 191);
+}
+
+// 搜索icon的抖动
+@keyframes header_doudong {
+  0% {
+    transform: translateX(10px);
+    transform: rotate(30deg);
+  }
+
+  100% {
+    transform: translateY(-10px);
+    transform: rotate(-30deg);
+    transform: scale(1.1);
+  }
+}
+
+// input框获取焦点放大
+.enlarge {
+  animation: enlarge 0.3s 1 alternate forwards;
+}
+@keyframes enlarge {
+  0% {
+    width: 200px;
+  }
+
+  100% {
+    width: 320px;
+  }
+}
+
+// input框失去焦点缩小
+.narrow{
+  animation: narrow 0.3s 1 alternate forwards;
+}
+@keyframes narrow {
+  0% {
+    width: 320px;
+  }
+
+  100% {
+    width: 200px;
+  }
+}
+// icon右移动
+.right_move{
+  animation: right_move 0.3s 1 alternate forwards;
+}
+@keyframes right_move {
+  0% {
+    left: 1108px;
+  }
+  100% {
+    left: 1228px;
+  }
+}
+
+// icon左移动
+.left_move{
+  animation: left_move 0.3s 1 alternate forwards;
+}
+@keyframes left_move {
+  0% {
+    left: 1228px;
+  }
+  100% {
+    left: 1108px;
+  }
+}
+
+// header的显示
+.visible{
+  animation: header_visible 0.4s 1 alternate forwards;
+}
+@keyframes header_visible {
+  0%{
+    margin-top: -62px;
+  }
+  100%{
+    margin-top: 0;
+  }
+}
+
+// header的隐藏
+.hidden{
+  animation: header_hidden 0.4s 1 alternate backwards;
+}
+@keyframes header_hidden {
+  0%{
+    margin-top: 0;
+  }
+  100%{
+    margin-top: -62px;
+  }
+}

@@ -1,0 +1,46 @@
+.hotspot_box {
+  padding: 20px;
+
+  .list_box {
+    display: flex;
+    justify-content: space-between;
+    height: 150px;
+    margin-bottom: 20px;
+    // border-bottom: 1px solid #ccc;
+
+    .content_box {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .title_box {
+        font-size: 20px;
+
+        &:hover {
+          color: rgb(236, 62, 62);
+          cursor: pointer;
+        }
+      }
+
+      span {
+        margin-right: 16px;
+        font-weight: 300;
+      }
+    }
+  }
+
+  .img_box {
+    margin-left: 16px;
+
+    img {
+      width: 200px;
+      height: 150px;
+    }
+  }
+}
+
+#father{
+  height: 990px;
+  // overflow: hidden;
+  overflow-y: scroll;
+}

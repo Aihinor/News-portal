@@ -1,0 +1,125 @@
+.icon_box {
+  width: 100px;
+  height: 300px;
+  background-color: #fff;
+  position: fixed;
+  left: 90px;
+  top: 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .likes_box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    .circular_box {
+      width: 48px;
+      height: 48px;
+      background-color: #f0f2f5;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 4px;
+
+      span {
+        font-size: 12px;
+        line-height: 20px;
+      }
+
+      .likes_icon {
+        font-size: 20px;
+        &:active{
+          animation: doudong 0.3s 2 alternate;
+        }
+      }
+    }
+
+  }
+
+  .comment_box {
+    width: 48px;
+    height: 44px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 18px;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    span {
+      font-size: 12px;
+      line-height: 20px;
+    }
+
+    .comment_img {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  .star_box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 18px;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    span {
+      width: 24px;
+      height: 24px;
+      font-size: 12px;
+    }
+
+    .star_icon {
+      font-size: 22px;
+    }
+  }
+
+  .share_box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 18px;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    span {
+      width: 24px;
+      height: 24px;
+      font-size: 12px;
+    }
+
+    .share_img {
+      width: 24px;
+      height: 24px;
+    }
+  }
+}
+
+@keyframes doudong {
+  0% {
+    transform: translateX(10px);
+    transform: rotate(30deg);
+  }
+
+  100% {
+    transform: translateY(-10px);
+    transform: rotate(-30deg);
+    transform: scale(1.1)
+
+  }
+}
