@@ -25,7 +25,7 @@ export default function Login() {
       if(res.status === 0){
         message.success(res.message + '!正在跳转页面.....')
         // 跳转到根路径
-        setTimeout(() => navigate('/hotspot'), 2000);
+        setTimeout(() => navigate('/'), 2000);
       }else{
         message.error(res.message)
       }

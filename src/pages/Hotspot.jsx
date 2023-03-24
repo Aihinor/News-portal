@@ -1,42 +1,13 @@
 import axios from 'axios'
 import React, { useState, useEffect } from 'react'
 import './less/hotspot.less'
-import { useNavigate, Link } from 'react-router-dom'
+import { useNavigate,Link } from 'react-router-dom'
 import { message } from 'antd'
 
 export default function Hotspot() {
-
-  const ContainerHeight = 1100;
+  
   const navigate = useNavigate()
   const [record, setRecord] = useState([])
-
-  const onScroll = (e) => {
-    console.log(e)
-    if (e.currentTarget.scrollHeight - e.currentTarget.scrollTop === ContainerHeight) {
-      appendData();
-    }
-  };
-
-  window.onscroll = function () {
-    var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-    console.log("滚动距离" + scrollTop);
-    if(scrollTop >= 1296) {
-      appendData()
-    }
-  }
-
-  const appendData = () => {
-    axios({
-      method: 'get',
-      url: 'http://127.0.0.1:3007/my/article/achieve',
-      headers: { 'Authorization': localStorage.getItem('token') },
-    })
-      .then((res) => {
-        console.log(res.data.data)
-        setRecord(record.concat(res.data.data))
-        message.success(`${res.data.data.length} more items loaded!`);
-      })
-  }
 
   useEffect(() => {
     axios({
@@ -59,12 +30,12 @@ export default function Hotspot() {
   }
 
   return (
-    <div className='hotspot_box' onScroll={onScroll}>
-      <ul id='father' >
+    <div className='hotspot_box'>
+      <ul id='father'>
         {
           record.map((item, key) => {
             return (
-              <li className='list_box' key={key} onClick={() => onclick(item.Id)}>
+              <li className='list_box' key={key} onClick={()=>onclick(item.Id)}>
                 <div className='content_box'>
                   <p className='title_box'>{item.title}</p>
                   <p>
@@ -81,6 +52,7 @@ export default function Hotspot() {
           })
         }
       </ul>
+
     </div>
   )
 }
